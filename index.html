@@ -3,65 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usefull sites for staifactory</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #323233;  /* Apply the theme color */
-            color: #ffffff;  /* Set the text color to white for contrast */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            background-color: #424244; /* Slightly lighter background for container */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            width: 100%;
-        }
-
-        h1, h2, p, pre, code {
-            color: #ffffff;  /* Ensure all text is readable on dark background */
-        }
-
-        pre {
-            background-color: #1e1e1e; /* Darker background for code blocks */
-            padding: 10px;
-            border-radius: 5px;
-            overflow: auto;
-        }
-
-        a {
-            color: #1e90ff; /* Make links blue for visibility */
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Satisfactory Resources</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Markdown File Viewer</h1>
-        <div id="markdown-content"></div>
-    </div>
+    <h2>Calculators (automates everything, just input your amounts)</h2>
+    <ul>
+        <li><a href="https://satisfactory-calculator.com/">SCIM (Satisfactory Calculator - Interactive Map)</a></li>
+        <li><a href="https://www.satisfactorytools.com/1.0/">Satisfactory Tools</a></li>
+        <li><a href="https://satisfactoryproductionplanner.com/dashboard">Satisfactory Production Planner</a></li>
+    </ul>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-        // Fetch the Markdown file and display it
-        fetch('Satisfactory-sites.md')  // Replace 'example.md' with the path to your Markdown file
-            .then(response => response.text())
-            .then(markdown => {
-                // Convert markdown to HTML and insert into the div
-                document.getElementById('markdown-content').innerHTML = marked.parse(markdown);
-            })
-            .catch(error => console.error('Error loading markdown:', error));
-    </script>
+    <h2>Planners (focused more on layouts but does some math for you)</h2>
+    <ul>
+        <li><a href="https://satisfactory-planner.vercel.app/">Satisfactory Planner</a></li>
+        <li><a href="https://store.steampowered.com/app/3187030/Satisfactory_Modeler/">Satisfactory Modeler</a></li>
+    </ul>
+
+    <h2>Other (kind of their own thing)</h2>
+    <ul>
+        <li><a href="https://questions.satisfactorygame.com/">Satisfactory Q&A</a></li>
+        <li><a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki">Satisfactory Wiki</a></li>
+        <li><a href="https://icemoonmagic.github.io/Satisfactory-Splitter-Calculator/">Satisfactory Splitter Calculator</a></li>
+    </ul>
 </body>
 </html>
