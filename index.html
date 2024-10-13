@@ -3,29 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown Viewer</title>
+    <title>Usefull sites for staifactory</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
+            background-color: #323233;  /* Apply the theme color */
+            color: #ffffff;  /* Set the text color to white for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
+
+        .container {
+            background-color: #424244; /* Slightly lighter background for container */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1, h2, p, pre, code {
+            color: #ffffff;  /* Ensure all text is readable on dark background */
+        }
+
         pre {
-            background-color: #f4f4f4;
+            background-color: #1e1e1e; /* Darker background for code blocks */
             padding: 10px;
             border-radius: 5px;
+            overflow: auto;
+        }
+
+        a {
+            color: #1e90ff; /* Make links blue for visibility */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Markdown File Viewer</h1>
-    <div id="markdown-content"></div>
+    <div class="container">
+        <h1>Markdown File Viewer</h1>
+        <div id="markdown-content"></div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         // Fetch the Markdown file and display it
-        fetch('Satsifactory-sites.md')  // Replace 'example.md' with the path to your Markdown file
+        fetch('example.md')  // Replace 'example.md' with the path to your Markdown file
             .then(response => response.text())
             .then(markdown => {
                 // Convert markdown to HTML and insert into the div
