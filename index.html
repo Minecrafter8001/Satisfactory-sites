@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Gist</title>
+    <title>Markdown Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Gist Embed Example</h1>
-    <script src="https://gist.github.com/Minecrafter8001/7069e14f848df329839ec39b1c1a4b76.js"></script>
+    <h1>Markdown File Viewer</h1>
+    <div id="markdown-content"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // Fetch the Markdown file and display it
+        fetch('example.md')  // Replace 'example.md' with the path to your Markdown file
+            .then(response => response.text())
+            .then(markdown => {
+                // Convert markdown to HTML and insert into the div
+                document.getElementById('markdown-content').innerHTML = marked.parse(markdown);
+            })
+            .catch(error => console.error('Error loading markdown:', error));
+    </script>
 </body>
 </html>
